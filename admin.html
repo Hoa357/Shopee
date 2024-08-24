@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./admin.css">
+</head>
+<body>
+     <!--start header-->
+    <div class="headerContainer">
+      <div class="headerContainer__commonMenu">
+        <div class="headerContainer__commonMenu--left">
+          <div class="seller"><p>Seller Centre</p></div>
+          <div class="dowload"><p>Download</p></div>
+          <div class="follow">
+            <p>Follow us on</p>
+            <div class="follow--img">
+              <img
+                class="subImg__fac"
+                src="./img/facebook-Icon.svg"
+                alt="fac"
+              />
+              <img class="subImg" src="./img/instagram-Icon.svg" alt="ins" />
+            </div>
+          </div>
+        </div>
+        <div class="headerContainer__commonMenu--right">
+          <div class="notification">
+            <img
+              class="subImg__noti"
+              src="./img/notification-Icon.svg"
+              alt=""
+            />
+            <p>Notifications</p>
+          </div>
+          <div class="help">
+            <img class="subImg" src="./img/help-circle-Icon.svg" alt="" />
+            <p>Help</p>
+          </div>
+          <div class="english">
+            <img class="subImg" src="./img/global-Icon.svg" alt="" />
+            <p>English</p>
+            <img class="subImg" src="./img/arrow-Icon.svg" alt="" />
+          </div>
+          <div class="account">
+            <img class="subImg" src="./img/avatar.png" alt="" />
+            <p>mhoatruong573</p>
+          </div>
+        </div>
+      </div>
+      <div class="headerContainer__searchBar">
+        <div class="headerContainer__searchBar--logo">
+          <img class="logo" src="./img/logo-Icon.jfif" alt="" />
+        </div>
+        <div class="headerContainer__searchBar--search">
+          <div class="searchBox">
+            <div class="searchBox__input">
+              <input type="text" placeholder="Sinh nhật Video -Giảm 50%" />
+            </div>
+            <div class="searchBox__icon">
+              <img
+                class="subImg__search"
+                src="./img/search-Icon.svg"
+                alt="search"
+              />
+            </div>
+          </div>
+          <div class="suggestion">
+            <ul type="none" type="none">
+              <li>Tất Nike cao cổ</li>
+              <li>Áo baby Tee</li>
+              <li>Bánh tráng Sate</li>
+              <li>Son</li>
+              <li>Dép</li>
+              <li>Phấn phủ Carslan</li>
+              <li>Capybara Chảy nước mũi</li>
+              <li>Kẹp hoa sứ</li>
+              <li>Balo</li>
+            </ul type="none">
+          </div>
+        </div>
+        <div class="headerContainer__searchBar--cart">
+          <img class="subImg__cart" src="./img/cart-Icon.svg" alt="" />
+        </div>
+      </div>
+    </div>
+    <!--end header-->
+
+    <!--acount-->
+    <div class="contentContainer">
+      <div class="contentContainer__profile">
+         <div class="contentContainer__profile--acount">
+           <div class="profile__avatar">
+              <div class="profile__avatar--logoAccount">
+                    <img src="./img/logo-acount/logo-acount.svg" alt="">
+              </div>              
+               <div class="profile__avatar--edit">
+                 <p  class="editProfile__name">mhoatrng</p>
+                 <div  class="editProfile__editText">
+                    <img src="./img/logo-acount/pen.svg" alt="">
+                    <p>Edit Profile</p>
+                 </div>
+               </div>
+           </div>
+             <div class="profile__myAccount">
+                
+                   <div class="profile__myAccount--title">
+                      <img src="./img/logo-acount/logoacount-xanh.png" alt="">
+                      <p>My Account</p>
+                   </div>
+                   <div class="profile__myAccount--items">
+                     <a href="#"><span>Profile</span></a>
+                      <a href="#"><span>Banks & Cards</span></a>
+                       <a href="#"><span>Addresses</span></a>
+                        <a href="#"><span>Change Password</span></a>
+                         <a href="#"><span>Notification Settings</span></a>
+                          <a href="#"><span>Privacy Settings</span></a>
+                   </div>
+              </div>
+              <div class="profile__infor">
+                <div class="profile__infor--myTitle">
+                    <img src="./img/logo-acount/MyPurchase.png" alt="">
+                    <p>My Purchase</p>
+                </div>
+                <div class="profile__infor--myTitle">
+                    <img src="./img/logo-acount/MyNotification.png" alt="">
+                    <p>Notification</p>
+                </div>
+                <div class="profile__infor--myTitle">
+                    <img src="./img/logo-acount/MyVouchers.png" alt="">
+                    <p>My Vouchers</p>
+                </div>
+                 <div class="profile__infor--myTitle">
+                    <img src="./img/logo-acount/MyCoins.png" alt="">
+                    <p>My Shopee Coins </p>
+                </div>
+           </div>
+         </div>
+         <div class="contentContainer__profile--formProfile">
+          <div class="formProfile__title">
+            <p>My Profile</p>
+            <span>Manage and protect your account</span>
+          </div> 
+          <div class="formProfile__inforAccount">
+             <div class="formProfile__inforAccount--form">
+                <form action="" onsubmit="handSubmit(event)">
+                  <table>
+                    <tr >
+                      <td class="noPadding"><label for="username">Username</label></td>
+                      <td  id="usernameBlock" class="noPadding">  
+                          <input  id="username"  onblur="handleCheck(event, 'usernameBlock', 'userRemove')" type="text"  />
+                      </td>
+                    </tr>
+                     <tr>
+                        <td></td>
+                        <td> <p>Username can only be changed once</p></td>
+                      </tr>
+                      <tr>
+                      <td ><label for="name">Name</label></td>
+                      <td id="nameBlock"> 
+                         <input  id="name"  onblur="handleCheck(event, 'nameBlock', 'nameRemove')" type="text"  />
+                          
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <td> <label for="email">Email</label></td>
+                      <td><a href="">Add</a></td>
+                    </tr>
+                    <tr>
+                      <td> <label for="phone">Phone Number</label></td>
+                      <td>
+                        <div class="number__change">
+                         <p>0123456789</p> 
+                         <a href="#">Change</a>
+                        </div>
+                      </td>
+                  </tr>
+                    <tr>
+                      <td><label for="gender">Gender</label></td>
+                      <td>
+                        <div class="number__change">
+                          <div class="number__change--items">
+                            <input type="radio" id="gender"  >
+                            <span>Male</span>
+                          </div> 
+                           <div class="number__change--items">
+                            <input type="radio" id="gender"  >
+                            <span>Female</span>
+                          </div>
+
+                           <div class="number__change--items">
+                            <input type="radio" id="gender"  >
+                            <span>Other</span>
+                          </div>
+
+                        </div>
+                          
+                  
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>  <label for="birth">Date of birth</label> </td>
+                      <td> <div class="number__change">
+                         <p>19/02/2024</p> 
+                         <a href="#">Change</a>
+                      </div>
+                     </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td> <input  class="buttonSave" type="submit" value="Save"></td>
+                    </tr>
+                  </table>
+                  
+                </form>
+             </div>
+             <div class="formProfile__inforAccount--image">
+              <div class="imageAccountInfo">
+                 <img src="./img/logo-acount/logo-acount.svg" alt="">
+                <div class="selectImage"><span>Select Image</span></div>
+                <div>
+                  <p>File size: maximun 1MB</p>
+                  <p>File extension: .JPEG, .PNG</p>
+                </div>
+              
+              </div>
+               
+             </div>
+          </div>        
+       </div>
+      </div>
+     
+    </div>   
+              
+    <!--end acount-->      
+
+      <!--footer-->
+      <div class="footerContainer">
+        <div class="footerContainer__top">
+          <div class="footerContainer__top--content">
+            <p class="content__title">CHĂM SÓC KHÁCH HÀNG</p>
+            <ul class="content__text">
+              <li>Trung Tâm Trợ Giúp</li>
+              <li>Shopee Blog</li>
+              <li>Shopee Mall</li>
+              <li>Hướng Dẫn Mua Hàng</li>
+              <li>Hướng Dẫn Bán Hàng</li>
+              <li>Thanh toán</li>
+              <li>Shopee Xu</li>
+              <li>Vận chuyển</li>
+              <li>Trả hàng và hoàn tiền</li>
+              <li>Chăm Sóc Khách Hàng</li>
+              <li>Chính Sách Bảo Hành</li>
+            </ul >
+          </div>
+
+          <div class="footerContainer__top--content">
+            <p class="content__title">VỀ SHOPEE</p>
+            <ul  class="content__text" >
+              <li>Trung Tâm Trợ Giúp</li>
+              <li>Shopee Blog</li>
+              <li>Shopee Mall</li>
+              <li>Hướng Dẫn Mua Hàng</li>
+              <li>Hướng Dẫn Bán Hàng</li>
+              <li>Thanh toán</li>
+              <li>Shopee Xu</li>
+              <li>Vận chuyển</li>
+              <li>Trả hàng và hoàn tiền</li>
+            </ul >
+          </div>
+          <div class="footerContainer__top--content">
+            <p class="content__title">PAYMENT</p>
+            <div class="content__paystra">
+                <div><img src="./img/logo-footer/visa.png" alt="" /></div>
+                <div><img src="./img/logo-footer/giao.png" alt="" /></div>
+                <div><img src="./img/logo-footer/jcb.png" alt="" /></div>
+                <div><img src="./img/logo-footer/american.png" alt="" /></div>
+                <div><img src="./img/logo-footer/cod.png" alt="" /></div>
+                <div><img src="./img/logo-footer/tragop.png" alt="" /></div>
+                <div><img src="./img/logo-footer/pay.png" alt="" /></div>
+                <div><img src="./img/logo-footer/spayLater.png" alt="" /></div>
+            </div >
+
+            <p class="content__title">LOGISTICS</p>
+              <div class="content__paystra">
+                <div><img src="./img/logo-footer/spx.png" alt="" /></div>
+                <div><img src="./img/logo-footer/giaohangtietkiem.png" alt="" /></div>
+                <div><img src="./img/logo-footer/giaohangnhanh.png" alt="" /></div>
+                <div><img src="./img/logo-footer/viettelpost.png" alt="" /></div>
+                <div><img src="./img/logo-footer/vietnampost.png" alt="" /></div>
+                <div><img src="./img/logo-footer/j&t.png" alt="" /></div>
+                <div><img src="./img/logo-footer/grapExpress.png" alt="" /></div>
+                <div><img src="./img/logo-footer/ninjavan.png" alt="" /></div>
+                <div><img src="./img/logo-footer/best.png" alt="" /></div>
+                <div><img src="./img/logo-footer/be.png" alt="" /></div>
+                <div><img src="./img/logo-footer/alamove.png" alt="" /></div>
+              </div>
+          </div>
+          <div class="footerContainer__top--content">
+            <p  class="content__title">FOLLOW US</p>
+            <ul  class="content__text">
+              <li>
+                <img class="subImg" src="./img/logo-footer/facebook.svg" alt="" />
+                <p>Facebook</p>
+              </li>
+              <li>
+                <img class="subImg" src="./img/logo-footer/instagram.svg" alt="" />
+                <p>Instagram</p>
+              </li>
+              <li>
+                <img class="subImg" src="./img/logo-footer/linkedin.svg" alt="" />
+                <p>Linkedln</p>
+              </li>
+            </ul>
+          </div>
+          <div class="footerContainer__top--content">
+            <p  class="content__title">SHOPEE APP DOWLOAD</p>
+            <div class="content__dowload">
+                  <div class="content__dowload--qr">
+                    <img src="./img/logo-footer/QR.png" alt="" />
+                  </div>
+                  <div class="content__dowload--app">
+                    <div><img  src="./img/logo-footer/appstore.png" alt="" /></div>
+                    <div><img  src="./img/logo-footer/googleplay.png" alt="" /></div>
+                    <div><img  src="./img/logo-footer/appgallery.png" alt="" /></div>
+                  </div>
+
+            </div>
+          
+          </div>
+        </div>
+               
+        
+        <div class="footerContainer__center">
+           <div class="footerContainer__center--left">
+              <p>@ 2024 Shopee.All Rights Reserved .</p>
+           </div>
+           <div class="footerContainer__center--right">
+              <div>Country & Region: </div>
+              <div class="footerCenter_column">Indonesia</div>
+                <div class="footerCenter_column">Thailand</div>
+                <div class="footerCenter_column">Vietnam</div>
+                <div class="footerCenter_column">Philippines</div>
+                <div class="footerCenter_column">Brazil</div>
+                <div class="footerCenter_column">Mexico</div>
+                <div class="footerCenter_column">Colombia</div>
+                <div class="footerCenter_column">Chile</div>
+                <div>Taiwan</div>
+               
+              
+            
+
+           </div>
+         </div>
+      </div>
+      <div class="footer__bottom">
+            <div class="footer__bottom--title">
+              <div>PRIVACY POLICY</div>
+               <div>TERM OF SERVICE</div>
+               <div>SHIPPING POLICY</div>
+               <div>VIOLATION </div>
+            </div>
+            <div class="footer__bottom--logo">
+               <img class="img__footer" src="./img/logo-footer/logo-BCT.png" alt="">
+               <img class="img__footer" src="./img/logo-footer/logo-BCT.png" alt="">
+                <img class="img__footer"  src="./img/logo-footer/Logo-kiemchung.JPG" alt="">
+            </div>
+          
+            <div class="footer__bottom--describe">
+            <p id="footerContent">Shopee Company Limitied</p>
+            <p>Floor4-5-6, Captital Building, No. 29,Lieu Giai Street, Ngoc Khanh ward, Ba Dinh District, Hanoi, Vietnam</p>
+            <p>Person in charge of information management: Nguyen Bui Anh Tuan</p>
+            <p>Business Registion Certificate No: 0106773786</p>
+            <p>@2015 - Copyright belongs to Shopee Company Limited</p>
+            
+            </div>
+
+            
+      </div>
+      
+      <!---->
+    </div>
+
+    <script>
+    
+
+      // handcheck
+
+       function handleCheck(event, idParent, idChild) {
+      const childIdRemove = document.getElementById(idChild);
+      const parentIdBlock = document.getElementById(idParent);
+     
+       if (event.target.value.trim() !== "") {
+         if(childIdRemove) 
+         parentIdBlock.removeChild(childIdRemove);
+           } else {
+    
+          const newElement = document.createElement("p");
+          newElement.innerHTML = "Vui lòng nhập ";
+          newElement.setAttribute("id",idChild);
+          newElement.style.color = "red";
+        
+
+          if(!document.getElementById("childIdRemove"))
+          {
+               parentIdBlock.appendChild(newElement);
+             
+          }
+           }
+    }
+
+
+
+
+      
+
+      const usernameElement = document.getElementById("username");
+ 
+     let isError = false; 
+
+     
+      usernameElement.addEventListener('input', function() {
+     
+   // check least 5 - 30
+     const usernameInput = this.value;
+    if(usernameInput.length >= 5 && usernameInput.length <= 30)
+   {
+      isError = true;
+   }
+     else {
+       isError = false;
+    }
+
+
+    // check số
+    
+      if ( /\d/.test(usernameInput) ) {
+        isError = true;
+      } else {
+       isError = false;
+      }
+         
+    
+    // check chữ 
+  
+         if ( /[a-z]/.test(usernameInput) || /[A-Z]/.test(usernameInput) ) {
+        isError = true;
+      } else {
+       isError = false;
+      }
+          
+    // check ký tự đặc biệt     
+     if ( /[ ]/.test(usernameInput) || /[.]/.test(usernameInput) ) {
+        isError = true;
+      } else {
+       isError = false;
+      }
+       
+    });
+       /* nêu check đúng 
+        <p id="defaut">Username can only be changed once</p>
+        */
+  
+  
+
+   function handSubmit(event) {
+  event.preventDefault();
+  // khai báo cho từng input
+  const usernameElement = document.getElementById("username");
+  const nameElement = document.getElementById("name");
+
+  // không nhập username
+  const usernameBlockElement = document.getElementById("usernameBlock");
+  if (usernameElement.value.trim() === "") {
+    const newUserName = document.createElement("p");
+   newUserName .setAttribute("id", "userRemove");
+    newUserName .innerHTML = "Please enter username";
+    newUserName .style.color = "red";
+    if (!document.getElementById("userRemove")) {
+      usernameBlockElement.appendChild(newUserName);
+    }
+    isError = true;
+  } else {
+    isError = false;
+  }
+
+  // không nhập name
+  const nameBlockElement = document.getElementById("nameBlock");
+  if (nameElement.value.trim() === "") {
+    const newName  = document.createElement("p");
+    newName.setAttribute("id", "nameRemove");
+    newName.innerHTML = "Please enter name";
+    newName.style.color = "red";
+    if (!document.getElementById("nameRemove")) {
+      nameBlockElement.appendChild(newName);
+    }
+    isError = true;
+  } else {
+    isError = false;
+  }
+
+  if (!isError) {
+   
+    alert("Form successfully!");
+   
+    const newUserNameDefault = document.createElement("p");
+   newUserNameDefault.setAttribute("id", "defaut");
+   newUserNameDefault.innerHTML = "Username can only be changed once";
+   newUserNameDefault.style.color = "grey";
+   if(!document.getElementById("defaut"))
+  usernameBlockElement.appendChild(newUserNameDefault);
+  
+  }
+}
+    </script>
+</body>
+</html>

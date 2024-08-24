@@ -1,0 +1,571 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+/* */
+.textNoti {
+  color: grey;
+  font-size: 16px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/**/
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.subImg {
+  width: 15px;
+}
+
+.subImg__fac {
+  width: 20px;
+  margin-left: 3px;
+  margin-bottom: -2px;
+}
+.subImg__noti {
+  width: 20px;
+  margin-left: 3px;
+  margin-bottom: 2px;
+}
+.subImg__cart {
+  width: 35px;
+}
+.subImg__search {
+  margin: 3px 0px;
+  width: 15px;
+}
+
+.logo {
+  width: 200px;
+  height: 100px;
+}
+
+.headerContainer {
+  background-color: #EE4D2D;
+}
+.headerContainer__commonMenu {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 30px;
+  padding-top: 6px;
+}
+.headerContainer__commonMenu--left {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.headerContainer__commonMenu--left > div {
+  margin-right: 10px;
+}
+.headerContainer__commonMenu--left .follow {
+  display: flex;
+  align-items: center;
+}
+.headerContainer__commonMenu--right {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.headerContainer__commonMenu--right > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 10px;
+}
+.headerContainer__commonMenu--right > div > img {
+  margin-right: 5px;
+}
+.headerContainer__commonMenu--right .english p {
+  margin-right: 5px;
+}
+.headerContainer__searchBar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.headerContainer__searchBar--search {
+  width: 60%;
+}
+.headerContainer__searchBar--search .searchBox {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  height: 34px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+.headerContainer__searchBar--search .searchBox__input {
+  width: 100%;
+}
+.headerContainer__searchBar--search .searchBox__input input[type=text] {
+  margin-left: 10px;
+  width: 100%;
+  height: 34px;
+  border: none;
+  border-radius: 2px;
+}
+.headerContainer__searchBar--search .searchBox__icon {
+  background-color: #f63;
+  width: 10%;
+  margin-right: 4px;
+  text-align: center;
+  height: 23px;
+  border-radius: 2px;
+}
+.headerContainer__searchBar--search .suggestion ul {
+  display: flex;
+}
+.headerContainer__searchBar--search .suggestion ul li {
+  font-size: 13px;
+  margin-right: 20px;
+  color: white;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-bottom: 5px solid #ee4d2d;
+}
+.contentContainer__profile {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+  padding-bottom: 50px;
+}
+.contentContainer__profile--acount {
+  width: 20%;
+}
+.contentContainer__profile--acount .profile__avatar {
+  display: flex;
+  padding: 25px 0px;
+}
+.contentContainer__profile--acount .profile__avatar--logoAccount {
+  padding-right: 10px;
+}
+.contentContainer__profile--acount .profile__avatar--logoAccount img {
+  width: 48px;
+  height: 48px;
+  margin-right: 10px;
+  border-radius: 50px;
+  border: 1px solid grey;
+}
+.contentContainer__profile--acount .profile__avatar--edit .editProfile__name {
+  color: black;
+}
+.contentContainer__profile--acount .profile__avatar--edit .editProfile__editText {
+  display: flex;
+  color: grey;
+  margin-top: 10px;
+}
+.contentContainer__profile--acount .profile__avatar--edit .editProfile__editText img {
+  width: 20px;
+  padding-right: 5px;
+}
+.contentContainer__profile--acount .profile__myAccount--title {
+  display: flex;
+  margin-bottom: 15px;
+}
+.contentContainer__profile--acount .profile__myAccount--title img {
+  width: 20px;
+  margin-right: 10px;
+}
+.contentContainer__profile--acount .profile__myAccount--items {
+  padding-left: 34px;
+}
+.contentContainer__profile--acount .profile__myAccount--items a {
+  margin-bottom: 15px;
+  display: block;
+  text-decoration: none;
+  color: grey;
+}
+.contentContainer__profile--acount .profile__myAccount--items a:hover {
+  color: red;
+}
+.contentContainer__profile--acount .profile__infor--myTitle {
+  display: flex;
+  margin-bottom: 20px;
+}
+.contentContainer__profile--acount .profile__infor--myTitle img {
+  width: 20px;
+  margin-right: 10px;
+}
+.contentContainer__profile--notification {
+  width: 80%;
+  padding: 0px 25px 15px 25px;
+  background-color: white;
+}
+.contentContainer__profile--notification .notification__email {
+  padding: 15px 25px;
+}
+.contentContainer__profile--notification .notification__email--info {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 0px 25px 0px;
+}
+.contentContainer__profile--notification .notification__email--info .notiContent .titleEmail {
+  color: rgb(192, 18, 18);
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+.contentContainer__profile--notification .notification__email--info .notiCheck .switch {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 34px;
+}
+.contentContainer__profile--notification .notification__email--info .notiCheck .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.contentContainer__profile--notification .notification__email--info .notiCheck .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  /* xíu giới thiệu */
+  transition: 0.4s;
+  border-radius: 50px;
+}
+.contentContainer__profile--notification .notification__email--info .notiCheck .slider::before {
+  position: absolute;
+  content: "";
+  width: 26px;
+  height: 26px;
+  top: 4px;
+  border-radius: 30px;
+  left: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+.contentContainer__profile--notification .notification__email--info .notiCheck .slider.round {
+  border-radius: 34px;
+}
+.contentContainer__profile--notification .notification__email--info .notiCheck .slider.round::before {
+  border-radius: 90%;
+}
+.contentContainer__profile--notification .notification__email--info .notiCheck input:checked + .slider {
+  background-color: aqua;
+}
+.contentContainer__profile--notification .notification__email--info .notiCheck input:checked + .slider::before {
+  transform: translateX(26px);
+}
+.contentContainer__profile--notification .notification__email--items {
+  padding-left: 25px;
+}
+.contentContainer__profile--notification .notification__email--items .email__items {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+.contentContainer__profile--notification .notification__email--items .email__items--content .titleNotiItems {
+  font-size: 18px;
+  padding-bottom: 5px;
+}
+.contentContainer__profile--notification .notification__email--items .email__items--buttonCheck .switch {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 34px;
+}
+.contentContainer__profile--notification .notification__email--items .email__items--buttonCheck .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.contentContainer__profile--notification .notification__email--items .email__items--buttonCheck .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  /* xíu giới thiệu */
+  transition: 0.4s;
+  border-radius: 50px;
+}
+.contentContainer__profile--notification .notification__email--items .email__items--buttonCheck .slider::before {
+  position: absolute;
+  content: "";
+  width: 26px;
+  height: 26px;
+  top: 4px;
+  border-radius: 30px;
+  left: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+.contentContainer__profile--notification .notification__email--items .email__items--buttonCheck .slider.round {
+  border-radius: 34px;
+}
+.contentContainer__profile--notification .notification__email--items .email__items--buttonCheck .slider.round::before {
+  border-radius: 90%;
+}
+.contentContainer__profile--notification .notification__email--items .email__items--buttonCheck input:checked + .slider {
+  background-color: aqua;
+}
+.contentContainer__profile--notification .notification__email--items .email__items--buttonCheck input:checked + .slider::before {
+  transform: translateX(26px);
+}
+.contentContainer__profile--notification .notification__sms {
+  padding: 15px 25px;
+  border-top: 1px solid rgb(219, 219, 219);
+}
+.contentContainer__profile--notification .notification__sms--info {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px 10px 0px;
+}
+.contentContainer__profile--notification .notification__sms--info .notiContent .titleSms {
+  color: rgb(192, 18, 18);
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+.contentContainer__profile--notification .notification__sms--info .notiSmsButton .switch {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 34px;
+}
+.contentContainer__profile--notification .notification__sms--info .notiSmsButton .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.contentContainer__profile--notification .notification__sms--info .notiSmsButton .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  /* xíu giới thiệu */
+  transition: 0.4s;
+  border-radius: 50px;
+}
+.contentContainer__profile--notification .notification__sms--info .notiSmsButton .slider::before {
+  position: absolute;
+  content: "";
+  width: 26px;
+  height: 26px;
+  top: 4px;
+  border-radius: 30px;
+  left: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+.contentContainer__profile--notification .notification__sms--info .notiSmsButton .slider.round {
+  border-radius: 34px;
+}
+.contentContainer__profile--notification .notification__sms--info .notiSmsButton .slider.round::before {
+  border-radius: 90%;
+}
+.contentContainer__profile--notification .notification__sms--info .notiSmsButton input:checked + .slider {
+  background-color: aqua;
+}
+.contentContainer__profile--notification .notification__sms--info .notiSmsButton input:checked + .slider::before {
+  transform: translateX(26px);
+}
+.contentContainer__profile--notification .notification__sms--items {
+  margin-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+.contentContainer__profile--notification .notification__sms--items .smscontent .titleNotiItems {
+  font-size: 18px;
+  padding-bottom: 5px;
+}
+.contentContainer__profile--notification .notification__sms--items .smsButtonCheck .switch {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 34px;
+}
+.contentContainer__profile--notification .notification__sms--items .smsButtonCheck .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.contentContainer__profile--notification .notification__sms--items .smsButtonCheck .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  /* xíu giới thiệu */
+  transition: 0.4s;
+  border-radius: 50px;
+}
+.contentContainer__profile--notification .notification__sms--items .smsButtonCheck .slider::before {
+  position: absolute;
+  content: "";
+  width: 26px;
+  height: 26px;
+  top: 4px;
+  border-radius: 30px;
+  left: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+.contentContainer__profile--notification .notification__sms--items .smsButtonCheck .slider.round {
+  border-radius: 34px;
+}
+.contentContainer__profile--notification .notification__sms--items .smsButtonCheck .slider.round::before {
+  border-radius: 90%;
+}
+.contentContainer__profile--notification .notification__sms--items .smsButtonCheck input:checked + .slider {
+  background-color: aqua;
+}
+.contentContainer__profile--notification .notification__sms--items .smsButtonCheck input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+/*footer */
+.google-ICon {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.img__footer {
+  width: 100px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  background-color: #fef6f5;
+}
+.footerContainer__top {
+  display: flex;
+  justify-content: space-around;
+  width: 1200px;
+  margin-top: 20px;
+  padding-bottom: 50px;
+}
+.footerContainer__top--content {
+  width: 100%;
+}
+.footerContainer__top .content__title {
+  font-weight: bolder;
+  padding-bottom: 15px;
+}
+.footerContainer__top .content__text {
+  margin-bottom: 15px;
+  list-style-type: none;
+}
+.footerContainer__top .content__text li {
+  margin-bottom: 10px;
+  display: flex;
+}
+.footerContainer__top .content__text li p {
+  padding-left: 10px;
+}
+.footerContainer__top .content__paystra {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footerContainer__top .content__paystra div {
+  border-radius: 2px;
+  box-shadow: 1px 2px #e1dcdc;
+  margin: 0px 10px 15px 0px;
+}
+.footerContainer__top .content__dowload {
+  display: flex;
+  width: 50%;
+}
+.footerContainer__top .content__dowload--qr {
+  box-shadow: 0.5px 1px #e1dcdc;
+  margin-right: 10px;
+}
+.footerContainer__top .content__dowload--app {
+  margin-left: 10px;
+}
+.footerContainer__top .content__dowload--app div {
+  margin-bottom: 10px;
+  height: 20px;
+  box-shadow: 0.5px 1px #e1dcdc;
+}
+.footerContainer__center {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(0, 0, 0, 0.54);
+  padding: 50px 0px 50px 0px;
+}
+.footerContainer__center--left {
+  color: rgba(0, 0, 0, 0.54);
+}
+.footerContainer__center--right {
+  display: flex;
+  color: rgba(0, 0, 0, 0.54);
+}
+.footerContainer__center--right div {
+  margin-left: 10px;
+  padding-right: 10px;
+}
+.footerContainer__center--right .footerCenter_column {
+  border-right: 1px solid rgba(0, 0, 0, 0.54);
+}
+
+.footer__bottom {
+  background-color: #f5f5f5;
+  width: 100%;
+}
+.footer__bottom--title {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: 50px 20px 30px 10px;
+}
+.footer__bottom--title div {
+  font-size: smaller;
+  margin-left: 20px;
+  color: rgba(0, 0, 0, 0.54);
+}
+.footer__bottom--logo {
+  text-align: center;
+}
+.footer__bottom--describe {
+  color: rgba(0, 0, 0, 0.54);
+  text-align: center;
+}
+.footer__bottom--describe p {
+  font-size: smaller;
+  margin-bottom: 10px;
+}
+.footer__bottom #footerContent {
+  color: rgba(0, 0, 0, 0.54);
+  text-align: center;
+  margin-bottom: 20px;
+}/*# sourceMappingURL=noti.css.map */

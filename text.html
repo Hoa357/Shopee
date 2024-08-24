@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Switch Toggle Text Example</title>
+    <style>
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+      }
+
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      .slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: 0.4s;
+        border-radius: 50px;
+      }
+
+      .slider::before {
+        position: absolute;
+        content: "";
+        width: 26px;
+        height: 26px;
+        top: 4px;
+        border-radius: 30px;
+        left: 4px;
+        background-color: white;
+        transition: 0.4s;
+      }
+
+      .slider.round {
+        border-radius: 34px;
+      }
+
+      .slider.round::before {
+        border-radius: 90%;
+      }
+
+      input:checked + .slider {
+        background-color: aqua;
+      }
+
+      input:checked + .slider::before {
+        transform: translateX(26px);
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <label class="switch">
+        <input type="checkbox" id="toggleSwitch" />
+        <span class="slider"></span>
+      </label>
+      <p id="toggleText" class="hidden">
+        Đây là một dòng văn bản có thể ẩn/hiện.
+      </p>
+    </div>
+    <script>
+      document
+        .getElementById("toggleSwitch")
+        .addEventListener("change", function () {
+          const textElement = document.getElementById("toggleText");
+          // Kiểm tra nếu nút switch đang ở trạng thái bật
+          if (this.checked) {
+            // Nếu đúng, loại bỏ class 'hidden' để hiện văn bản
+            textElement.classList.remove("hidden");
+          } else {
+            // Nếu sai, thêm class 'hidden' để ẩn văn bản
+            textElement.classList.add("hidden");
+          }
+        });
+    </script>
+  </body>
+</html>
+
+code js // Lắng nghe sự kiện 'change' trên phần tử checkbox với id
+'toggleSwitch'
+document.getElementById('toggleSwitch').addEventListener('change', function() {
+// Lấy phần tử văn bản cần ẩn/hiện với id 'toggleText' const textElement =
+document.getElementById('toggleText'); /* this ở đây tham chiếu đến phần tử HTML
+đã kích hoạt sự kiện 'change', trong trường hợp này là phần tử checkbox với id
+'toggleSwitch'. this.checked trả về true nếu checkbox được bật (on), và false
+nếu checkbox bị tắt (off). */ // Kiểm tra nếu nút switch đang ở trạng thái bật
+(on) if (this.checked) { // Nếu đúng, loại bỏ class 'hidden' để hiện văn bản
+textElement.classList.remove('hidden'); } else { // Nếu sai, thêm class 'hidden'
+để ẩn văn bản textElement.classList.add('hidden'); } }); Phong
